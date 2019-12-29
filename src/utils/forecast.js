@@ -10,7 +10,7 @@ request({url: url, json: true}, (error, response) => {
         callback('Unable to reach the location...Check your Search', undefined);
     }
     else{
-        callback(undefined, response.body.daily.data[0].summary + ' The Temperature is ' + response.body.currently.temperature + ' *C. There are ' + response.body.currently.precipProbability + '% chances of Rain.');
+        callback(undefined, response.body.daily.data[0].summary + ' The Temperature is ' + response.body.currently.temperature + ' centigrade. The high today is ' + response.body.daily.data[0].temperatureHigh + ' centigrade, with a low of ' + response.body.daily.data[0].temperatureLow + ' centigrade. There is ' + response.body.currently.precipProbability + '% chance of Rain.');
     }    
 })
 }
