@@ -24,21 +24,21 @@ app.use(express.static(publicDirectory));    //accessing root directory
 
 app.get('', (req, res) => {                 //template
     res.render('index', {
-        title: 'Weather App',
+        title: 'Home',
         name: 'Mehul Singh Teya'
     });
 })
 
 app.get('/help',(req, res) => {             //like app.com/help
     res.render('help', {
-        title: 'Help Section',
+        title: 'Help',
         name: 'Mehul Singh Teya'
     });
 })
 
 app.get('/about',(req, res) => {             //like app.com/help
     res.render('about', {
-        title: 'About Us Section',
+        title: 'About Us',
         name: 'Mehul Singh Teya'
     });
 })
@@ -70,7 +70,7 @@ app.get('/weather',(req, res) => {             //like app.com/help
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        errorMessage: "Help article Not Found",
+        errorMessage: "Oops...Help article Not Found... :/",
         name: 'daxter_army'
     })
 })
@@ -78,7 +78,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        errorMessage: "Page not Found",
+        errorMessage: "Seems like you are at the wrong address...Check URL !",
         name: 'daxter_army'
     })
 })
